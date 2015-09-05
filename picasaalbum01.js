@@ -69,8 +69,8 @@ function loadPicasaAlbum(userid, albumid, authkey, thumbsize, photosize, margin)
         $j("<img/>").attr("src", thumb.url.replace("s144","s1600"))
                     .attr("alt", desc)
                     .attr("style", imgMarginStyle(pad.hspace, pad.vspace, m))
-                    .wrap("<a href=\"" + imgScaledUrl(photo.url, ps) + "\" title=\"" + desc + "\" />");
-					.appendTo("#picasaPhotos")
+                    .wrap("<a href=\"" + imgScaledUrl(photo.url, ps) + "\" title=\"" + desc + "\" />")
+					.appendTo("#picasaPhotos");
       });
       
       //$j("#picasaPhotos a").slimbox();
@@ -109,8 +109,8 @@ function loadPicasaAlbum01(userid, albumid, authkey, thumbsize, photosize, margi
                     .attr("style", imgMarginStyle(pad.hspace, pad.vspace, m))
 					.attr("style", 'float:left;')
                     //.wrap("<a href=\"" + imgScaledUrl(photo.url, ps) + "\" title=\"" + desc + "\" />");
-					.wrap("<a href='" + thumb.url.replace("s144","s1600") + " />");
-					.appendTo("#picasaPhotos")
+					.wrap("<a href='" + thumb.url.replace("s144","s1600") + " />")
+					.appendTo("#picasaPhotos");
       });
       
       //$j("#picasaPhotos a").slimbox();
