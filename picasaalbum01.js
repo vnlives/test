@@ -104,14 +104,17 @@ function loadPicasaAlbum01(userid, albumid, authkey, thumbsize, photosize, margi
         var desc = pic.media$group.media$description.$t;
         var pad = computePadding(thumb.width, thumb.height);
 
+		var aHref = $j("<a/>").attr("href", thumb.url.replace("s144","s1600"));
         //$j("<img/>").attr("src", thumb.url.replace("s144","s1600"))
 		$j("<img/>").attr("src", thumb.url)
                     .attr("alt", desc)
                     .attr("style", imgMarginStyle(pad.hspace, pad.vspace, m))
 					.attr("style", 'float:left;')
                     //.wrap("<a href=\"" + imgScaledUrl(photo.url, ps) + "\" title=\"" + desc + "\" />");
-					.wrap("<a href='" + thumb.url.replace("s144","s1600") + "' />")
-					.appendTo("#picasaPhotos");
+					//.wrap("<a href='" + thumb.url.replace("s144","s1600") + "' />")
+					//.appendTo("#picasaPhotos");
+					.appendTo(aHref);
+		aHref.appendTo("#picasaPhotos");
       });
       
       //$j("#picasaPhotos a").slimbox();
