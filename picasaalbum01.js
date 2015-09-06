@@ -105,6 +105,7 @@ function loadPicasaAlbum01(userid, albumid, authkey, thumbsize, photosize, margi
         var pad = computePadding(thumb.width, thumb.height);
 
 		var aHref = $j("<a/>").attr("href", thumb.url.replace("s144","s1600"));
+								.attr("data-lightbox", 'LightBox');
         //$j("<img/>").attr("src", thumb.url.replace("s144","s1600"))
 		$j("<img/>").attr("src", thumb.url)
                     .attr("alt", desc)
