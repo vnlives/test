@@ -27,7 +27,7 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
         var desc = pic.media$group.media$description.$t;
         var pad = computePadding(thumb.width, thumb.height);
 
-		img = $('<img>').attr('src', thumb.url.replace("s144","s1600"));
+		img = $('<img>').attr('src', thumb.url.replace("s144","s1600")).attr('id', 'page' + i);
 		imgList[i] = img;
 		
 		//var tmpContent = '<li><img src="' + thumb.url.replace("s144","s1600") + '" alt=""><div class="titleImage">' + i + '</div></li>'
