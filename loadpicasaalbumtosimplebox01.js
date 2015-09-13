@@ -43,7 +43,9 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 		//var tmpContent = '<li><img src="' + thumb.url.replace("s144","s1600") + '" alt=""><div class="titleImage">' + i + '</div></li>'
 		//$j("#slider2").append(tmpContent);		
 		
-		tmpTemplate = "<a href='#top' class='transparent-btns_nav transparent-btns1_nav prev'><div onclick='pageNumber(" + i-1 + ")'>Previous</div></a><a href='#top' class='transparent-btns_nav transparent-btns1_nav next'><div onclick='pageNumber(" + i+1 + ")'>Next</div></a>";			
+		var n = i+1;
+		var p = i-1;
+		tmpTemplate = "<a href='#top' class='transparent-btns_nav transparent-btns1_nav prev'><div onclick='pageNumber(" + p + ")'>Previous</div></a><a href='#top' class='transparent-btns_nav transparent-btns1_nav next'><div onclick='pageNumber(" + n + ")'>Next</div></a>";			
 		tmpTemplateList[i] = tmpTemplate;
 		
 		var tmpContent = '<li><a href="#top" alt=""><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></a></li>'
