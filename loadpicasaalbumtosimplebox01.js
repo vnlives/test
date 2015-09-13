@@ -35,7 +35,7 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 		
 		
 		
-		var tmpContent = '<li><a href="' + window.location.href + '#page' + i + '" alt=""><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></a></li>'
+		var tmpContent = '<li><a href="#top" alt=""><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></a></li>'
 		$j("#padddingPage").append(tmpContent);
 
 
