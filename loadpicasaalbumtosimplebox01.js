@@ -28,12 +28,12 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 		
 		
 		var tmpContent = '<li><a href="' + thumb.url.replace("s144","s1600") + '" alt=""><div class="titleImage">' + i + '</div></a></li>'
-		$j("#padddingPage").append(imgList[0]);
+		$j("#padddingPage").append(tmpContent);
 
 
       });
 	  
-	  $j("#imageBox").append(tmpContent);	
+	  $j("#imageBox").append(imgList[0]);	
 
       /* Slideshow 2
       $j("#slider2").responsiveSlides({
