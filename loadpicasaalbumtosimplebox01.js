@@ -1,8 +1,16 @@
+var imgList = [];
+
+function pageNumber(number) {
+	$j("#imageBox").empty();
+	$j("#imageBox").append(imgList[number]);	
+
+}
+
 function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photosize, margin) {
   var ts = thumbsize || DEFAULT_THUMBSIZE;
   var ps = photosize || DEFAULT_PHOTOSIZE;
   var m = margin || DEFAULT_MARGIN;
-	var imgList = [];
+
 	var img;
   // Originally based on code from http://www.bloggingtips.com/2009/03/23/picasa-widgets-and-plugins-for-your-blog/
   $j = jQuery.noConflict();
@@ -27,7 +35,7 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 		
 		
 		
-		var tmpContent = '<li><a href="' + thumb.url.replace("s144","s1600") + '" alt=""><div class="titleImage">' + i + '</div></a></li>'
+		var tmpContent = '<li><a href="' + window.location.href + '#page' + i + '" alt=""><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></a></li>'
 		$j("#padddingPage").append(tmpContent);
 
 
