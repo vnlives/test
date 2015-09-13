@@ -62,7 +62,7 @@ function loadPicasaAlbumtosimplebox(userid, albumid, authkey, thumbsize, photosi
         var desc = pic.media$group.media$description.$t;
         var pad = computePadding(thumb.width, thumb.height);
 
-		var tmpContent = '<li><img src="' + thumb.url.replace("s144","s1600") + '" alt=""></li>'
+		var tmpContent = '<li><div class="titleImage">' + i + '</div><img src="' + thumb.url.replace("s144","s1600") + '" alt=""></li>'
 		$j("#slider2").append(tmpContent);
 
       });
