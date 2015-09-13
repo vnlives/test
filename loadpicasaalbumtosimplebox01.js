@@ -1,5 +1,5 @@
 var imgList = [];
-var tmpTemplate = "<a href='#top' class='transparent-btns_nav transparent-btns1_nav prev'>Previous</a>""<a href='#top' class='transparent-btns_nav transparent-btns1_nav next'>Next</a>"
+var tmpTemplate = "<a href='#top' class='transparent-btns_nav transparent-btns1_nav prev'>Previous</a><a href='#top' class='transparent-btns_nav transparent-btns1_nav next'>Next</a>";
 
 function pageNumber(number) {
 	$j("#imageBox").empty();
