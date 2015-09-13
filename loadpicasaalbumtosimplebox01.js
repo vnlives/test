@@ -45,10 +45,10 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 		
 		var n = i+1;
 		var p = i-1;
-		tmpTemplate = "<a href='#top' class='transparent-btns_nav transparent-btns1_nav prev'><div onclick='pageNumber(" + p + ")'>Previous</div></a><a href='#top' class='transparent-btns_nav transparent-btns1_nav next'><div onclick='pageNumber(" + n + ")'>Next</div></a>";			
+		tmpTemplate = "<div class='transparent-btns_nav transparent-btns1_nav prev' onclick='pageNumber(" + p + ")'>Previous</div><div class='transparent-btns_nav transparent-btns1_nav next' onclick='pageNumber(" + n + ")'>Next</div>";			
 		tmpTemplateList[i] = tmpTemplate;
 		
-		var tmpContent = '<li><a href="#top" alt=""><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></a></li>'
+		var tmpContent = '<li><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></li>'
 		$j("#padddingPage").append(tmpContent);
 
 
