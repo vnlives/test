@@ -12,7 +12,11 @@ function pageNumber(number) {
 	}	
 	
 	$j("#imageBox").empty();
-	$j("#imageBox").append(imgList[number]).append(tmpTemplateList[number]);	
+	$j("#imageBox").append(imgList[number]).append(tmpTemplateList[number]);
+
+	 $j("html, body").animate({ scrollTop: 0 }, "fast");
+	 return false;	
+	
 }
 
 function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photosize, margin) {
