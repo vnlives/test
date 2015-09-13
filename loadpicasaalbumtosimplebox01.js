@@ -2,14 +2,13 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
   var ts = thumbsize || DEFAULT_THUMBSIZE;
   var ps = photosize || DEFAULT_PHOTOSIZE;
   var m = margin || DEFAULT_MARGIN;
-
+	var imgList = [];
+	var img;
   // Originally based on code from http://www.bloggingtips.com/2009/03/23/picasa-widgets-and-plugins-for-your-blog/
   $j = jQuery.noConflict();
   $j(document).ready(function(){
   $j.getJSON("http://picasaweb.google.com/data/feed/api/user/" + userid + "/album/" + albumid + "?authkey=" + authkey + "&kind=photo&alt=json-in-script&callback=?",
 
-	var imgList = [];
-	var img;
     function(data, status) {
       $j("#picasaTitle").text(data.feed.title.$t);
       $j("#picasaSubtitle").text(data.feed.subtitle.$t);
