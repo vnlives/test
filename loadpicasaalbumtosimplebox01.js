@@ -1,9 +1,10 @@
 var imgList = [];
+var tmpTemplate = "<a href='#top' class='transparent-btns_nav transparent-btns1_nav prev'>Previous</a>""<a href='#top' class='transparent-btns_nav transparent-btns1_nav next'>Next</a>"
 
 function pageNumber(number) {
 	$j("#imageBox").empty();
 	$j("#imageBox").append(imgList[number]);	
-
+	$j("#imageBox").append(tmpTemplate);
 }
 
 function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photosize, margin) {
@@ -27,7 +28,7 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
         var desc = pic.media$group.media$description.$t;
         var pad = computePadding(thumb.width, thumb.height);
 
-		img = $('<img>').attr('src', thumb.url.replace("s144","s1600")).attr("id", "top");
+		img = $('<img>').attr('src', thumb.url.replace("s144","s1600")).attr("id", "page" + i);
 		imgList[i] = img;
 		
 		//var tmpContent = '<li><img src="' + thumb.url.replace("s144","s1600") + '" alt=""><div class="titleImage">' + i + '</div></li>'
@@ -42,7 +43,8 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
       });
 	  
 	  $j("#imageBox").append(imgList[0]);	
-
+	  $j("#imageBox").append(tmpTemplate);
+	  
       /* Slideshow 2
       $j("#slider2").responsiveSlides({
         auto: false,
