@@ -81,6 +81,7 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 
       });
 	  
+	  pageNumber(0);
 	  $j("#imageBox").append(imgList[0]).append(tmpTemplateList[0]);	  
 	  
 	  
