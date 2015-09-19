@@ -11,11 +11,34 @@ function pageNumber(number) {
 		return;
 	}	
 	
+	if (number - 5 > 0) {
+		var min = number - 5;
+		var man = min + 10;
+		printPageControl(min, max)
+	} else {
+		printPageControl(0, 10)
+	}
+
 	$j("#imageBox").empty();
 	$j("#imageBox").append(imgList[number]).append(tmpTemplateList[number]);
 
 	 $j("html, body").animate({ scrollTop: 0 }, "fast");
 	 return false;	
+	
+}
+
+function printPageControl(min, max) {
+
+	$('padddingPage li').each(function(i)
+	{
+		$(this).attr("style", "display: none;");
+	});	
+	
+	$('padddingPage li').each(function(i)
+	{
+		if (i >= min && i <= max)
+		$(this).attr("style", "");
+	});		
 	
 }
 
@@ -52,7 +75,7 @@ function loadPicasaAlbumtosimplebox01(userid, albumid, authkey, thumbsize, photo
 		tmpTemplate = "<div class='transparent-btns_nav transparent-btns1_nav prev' onclick='pageNumber(" + p + ")'>Previous</div><div class='transparent-btns_nav transparent-btns1_nav next' onclick='pageNumber(" + n + ")'>Next</div>";			
 		tmpTemplateList[i] = tmpTemplate;
 		
-		var tmpContent = '<li><div class="titleImage" onclick="pageNumber(' + i + ')">' + i + '</div></li>'
+		var tmpContent = '<li><div class="titleImage" style="display: none;" onclick="pageNumber(' + i + ')">' + i + '</div></li>'
 		$j("#padddingPage").append(tmpContent);
 
 
