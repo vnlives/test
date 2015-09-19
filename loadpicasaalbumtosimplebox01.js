@@ -31,7 +31,7 @@ function printPageControl(min, max) {
 
 	$('padddingPage li').each(function(i)
 	{
-		$(this).attr("style", "display: none;");
+		$(this).attr("style", "");
 	});	
 	
 	$('padddingPage li').each(function(i)
