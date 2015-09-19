@@ -27,11 +27,11 @@ function mycallback(json) {
 	//<img style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;" alt="012" src="http://lh3.googleusercontent.com/-h8AY51iUSwk/VXwqYJqlBTI/AAAAAAAAEi8/uYK-OPFXXGk/s240/0012.jpg">
 	console.log("postSummary: " + postSummary);	
 	var picasaInfor;
-	if (postSummary.indexOf(" loadPicasaAlbum(") != -1) {
-		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbum("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbum("))).replace(/"|\s/g,"");
+	if (postSummary.indexOf("loadPicasaAlbum(") != -1) {
+		picasaInfor = postSummary.substring(postSummary.indexOf("loadPicasaAlbum("), postSummary.indexOf(");", postSummary.indexOf("loadPicasaAlbum("))).replace(/"|\s/g,"");
 		picasaInfor = picasaInfor.replace("loadPicasaAlbum(","").split(",");
-	} else if (postSummary.indexOf(" loadPicasaAlbumtosimplebox01(") != -1) {
-		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbumtosimplebox01("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbumtosimplebox01("))).replace(/"|\s/g,"");
+	} else if (postSummary.indexOf("loadPicasaAlbumtosimplebox01(") != -1) {
+		picasaInfor = postSummary.substring(postSummary.indexOf("loadPicasaAlbumtosimplebox01("), postSummary.indexOf(");", postSummary.indexOf("loadPicasaAlbumtosimplebox01("))).replace(/"|\s/g,"");
 		picasaInfor = picasaInfor.replace("loadPicasaAlbumtosimplebox01(","").split(",");	
 	}
 	else {
