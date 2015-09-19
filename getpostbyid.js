@@ -25,7 +25,7 @@ function mycallback(json) {
 
 	//http://elivsing.blogspot.com/search/label/Author%3A%20Freehand%20Tamashii
 	//<img style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;" alt="012" src="http://lh3.googleusercontent.com/-h8AY51iUSwk/VXwqYJqlBTI/AAAAAAAAEi8/uYK-OPFXXGk/s240/0012.jpg">
-	
+	console.log("postSummary: " + postSummary);	
 	var picasaInfor;
 	if (postSummary.indexOf(" loadPicasaAlbum(") != -1) {
 		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbum("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbum("))).replace(/"|\s/g,"");
@@ -38,8 +38,9 @@ function mycallback(json) {
 		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbumtosimplebox("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbumtosimplebox("))).replace(/"|\s/g,"");
 		picasaInfor = picasaInfor.replace("loadPicasaAlbumtosimplebox(","").split(",");
 	
-	}	
-	console.log("picasaInfor: " + picasaInfor);	
+	}
+	
+	//console.log("picasaInfor: " + picasaInfor);	
 	
 	var searchLabel = "http://elivsing.blogspot.com/search/label/";
 	var item = '<div id="' + picasaInfor[1] + '" class="separator" style="clear: both; text-align: center;">' 
