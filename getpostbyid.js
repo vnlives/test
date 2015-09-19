@@ -53,7 +53,7 @@ function mycallback(json) {
 				+ '<div id="numPage' + picasaInfor[1] + '"></div>'
 				+ '<b>Read:</b> <a href="javascript:void(0);" onclick="openLink(\'' + postUrl + '\')" target="_blank">Online</a><br />'
 				+ '<b>Download:</b><br />'
-				+ ' <a href="' + postContent + '" target="_blank">MediaFire</a>';
+				+ ' <a href="' + postContent + '" target="_blank">Link Download 001</a>';
 				
 	//document.write(postTitle + " -- " + postUrl + " --- " + postSummary);
 	document.write(item);
