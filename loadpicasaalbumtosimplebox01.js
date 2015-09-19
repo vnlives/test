@@ -15,9 +15,9 @@ function pageNumber(number) {
 	if (number - 5 > 0) {
 		var min = number - 5;
 		var max = min + 10;
-		printPageControl(min, max)
+		printPageControl(min, max, number)
 	} else {
-		printPageControl(0, 10);
+		printPageControl(0, 10, number);
 	}
 
 	$j("#imageBox").empty();
@@ -28,7 +28,7 @@ function pageNumber(number) {
 	
 }
 
-function printPageControl(min, max) {
+function printPageControl(min, max, index) {
 	console.log(min + " - " + max);
 	$('#padddingPage li').each(function(i)
 	{
@@ -39,7 +39,7 @@ function printPageControl(min, max) {
 	{
 		if (i >= min && i <= max) {
 			$(this).removeAttr("style");
-			if (i == min) {
+			if (i == index) {
 				$(this).attr("style", "border: 5px solid #CE6D1D;");
 			}			
 		}
