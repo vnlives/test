@@ -17,7 +17,7 @@ function pageNumber(number) {
 		var max = min + 10;
 		printPageControl(min, max)
 	} else {
-		printPageControl(0, 10)
+		printPageControl(0, 10);
 	}
 
 	$j("#imageBox").empty();
