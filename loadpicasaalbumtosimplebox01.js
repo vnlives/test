@@ -36,8 +36,10 @@ function printPageControl(min, max) {
 	
 	$('padddingPage li').each(function(i)
 	{
-		if (i >= min && i <= max)
-		$(this).removeAttr("style");
+		if (i >= min && i <= max) {
+			$(this).removeAttr("style");
+		}
+		
 	});		
 	
 }
