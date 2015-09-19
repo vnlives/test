@@ -31,13 +31,13 @@ function printPageControl(min, max) {
 
 	$('padddingPage li').each(function(i)
 	{
-		$(this).attr("style", "");
+		$(this).attr("style", "display:none;");
 	});	
 	
 	$('padddingPage li').each(function(i)
 	{
 		if (i >= min && i <= max)
-		$(this).attr("style", "");
+		$(this).removeAttr("style");
 	});		
 	
 }
