@@ -29,7 +29,7 @@ function pageNumber(number) {
 }
 
 function printPageControl(min, max) {
-
+	console.log(min + " - " max);
 	$('#padddingPage li').each(function(i)
 	{
 		$(this).attr("style", "display:none;");
