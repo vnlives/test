@@ -11,7 +11,7 @@ function pageNumber(number) {
 		return;
 	}	
 	
-	console.log(number);
+	//console.log(number);
 	if (number - 5 > 0) {
 		var min = number - 5;
 		var max = min + 10;
@@ -29,7 +29,7 @@ function pageNumber(number) {
 }
 
 function printPageControl(min, max, index) {
-	console.log(min + " - " + max);
+	//console.log(min + " - " + max);
 	$('#padddingPage li').each(function(i)
 	{
 		$(this).attr("style", "display:none;");
