@@ -30,9 +30,9 @@ function mycallback(json) {
 	if (postSummary.indexOf(" loadPicasaAlbum(") != -1) {
 		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbum("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbum("))).replace(/"|\s/g,"");
 		picasaInfor = picasaInfor.replace("loadPicasaAlbum(","").split(",");
-	} else if (postSummary.indexOf(" loadPicasaAlbum01(") != -1) {
-		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbum01("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbum01("))).replace(/"|\s/g,"");
-		picasaInfor = picasaInfor.replace("loadPicasaAlbum01(","").split(",");	
+	} else if (postSummary.indexOf(" loadPicasaAlbumtosimplebox01(") != -1) {
+		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbumtosimplebox01("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbumtosimplebox01("))).replace(/"|\s/g,"");
+		picasaInfor = picasaInfor.replace("loadPicasaAlbumtosimplebox01(","").split(",");	
 	}
 	else {
 		picasaInfor = postSummary.substring(postSummary.indexOf(" loadPicasaAlbumtosimplebox("), postSummary.indexOf(");", postSummary.indexOf(" loadPicasaAlbumtosimplebox("))).replace(/"|\s/g,"");
