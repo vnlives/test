@@ -32,7 +32,12 @@ function printPageControl(min, max) {
 	console.log(min + " - " + max);
 	$('#padddingPage li').each(function(i)
 	{
-		$(this).attr("style", "display:none;");
+		if (i == min) {
+			$(this).attr("style", "display:none;border: 5px solid #CE6D1D;");
+		} else {
+			$(this).attr("style", "display:none;");
+		}
+		
 		
 	});	
 	
