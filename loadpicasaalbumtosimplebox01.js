@@ -32,19 +32,16 @@ function printPageControl(min, max) {
 	console.log(min + " - " + max);
 	$('#padddingPage li').each(function(i)
 	{
-		if (i == min) {
-			$(this).attr("style", "display:none;border: 5px solid #CE6D1D;");
-		} else {
-			$(this).attr("style", "display:none;");
-		}
-		
-		
+		$(this).attr("style", "display:none;");
 	});	
 	
 	$('#padddingPage li').each(function(i)
 	{
 		if (i >= min && i <= max) {
 			$(this).removeAttr("style");
+			if (i == min) {
+				$(this).attr("style", "border: 5px solid #CE6D1D;");
+			}			
 		}
 		
 	});		
