@@ -14,7 +14,7 @@ function pageNumber(number) {
 	console.log(number);
 	if (number - 5 > 0) {
 		var min = number - 5;
-		var man = min + 10;
+		var max = min + 10;
 		printPageControl(min, max)
 	} else {
 		printPageControl(0, 10)
