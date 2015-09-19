@@ -30,13 +30,13 @@ function pageNumber(number) {
 
 function printPageControl(min, max) {
 
-	$('padddingPage li').each(function(i)
+	$('#padddingPage li').each(function(i)
 	{
 		$(this).attr("style", "display:none;");
 		console.log(i);
 	});	
 	
-	$('padddingPage li').each(function(i)
+	$('#padddingPage li').each(function(i)
 	{
 		if (i >= min && i <= max) {
 			$(this).removeAttr("style");
