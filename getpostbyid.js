@@ -51,7 +51,7 @@ function mycallback(json) {
 				+ '<a href="' + searchLabel + 'Language: ' + postTitleLanguage + '" target="_blank">'
 				+ postTitleLanguage + '</a><br />' 
 				+ '<div id="numPage' + picasaInfor[1] + '"></div>'
-				+ '<b>Read:</b> <a href="javascript:void(0);" onclick="openLink(\'' + postUrl + '\')" target="_blank">Online</a><br />'
+				+ '<b>Read:</b> <a href="javascript:void(0);" onclick="openLink(\'' + postUrl + '\')">Online</a><br />'
 				+ '<b>Download:</b><br />'
 				+ ' <a href="' + postContent + '" target="_blank">Link Download 001</a>';
 				
