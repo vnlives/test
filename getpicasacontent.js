@@ -65,7 +65,8 @@ function loadPicasaAlbum(userid, albumid, authkey, thumbsize, photosize, margin)
 
       $j.each(data.feed.entry, function(i, pic) {
 		
-		if (i == radomNumber) {
+		//if (i == radomNumber) {
+		if (i == 1) {
 			var thumb = pic.media$group.media$thumbnail[ts];
 			var photo = pic.media$group.media$content[0];
 			var desc = pic.media$group.media$description.$t;
