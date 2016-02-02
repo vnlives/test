@@ -53,7 +53,7 @@ function mycallback(json) {
 			var item01 = "<div class='row-fluid'><div class='span12 item'>"
 				var item02 = "<img src='" + imageThumb + "' class='float' />";
 				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a>"
-			var item05 = "<div style='clear'></div></div>";				
+			var item05 = "<div style='clear'></div></div></div>";				
 			
 			item = item01 + item02 + item03 + item05;			
 			
