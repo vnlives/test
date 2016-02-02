@@ -33,7 +33,7 @@ function mycallback(json) {
 		var item = "";
 		if (flag == 0) {
 			
-			var item01 = "<div class='col-md-8'><div class='well'>"
+			var item01 = "<div class='col-md-6'><div class='well'>"
 				var item02 = "<img src='" + imageThumb.replace("/s72-c/","/s300/") + "' class='' style='width:100%;height:auto' /><br />";
 				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a><br />"
 				var item04 = "<div class='text'>" + postContent + "</div><br />";
@@ -43,7 +43,7 @@ function mycallback(json) {
 			 
 		} else if (flag == 1) {
 			
-			var item01 = "<div class='col-md-4'><div class='row-fluid'><div class='span12'>"
+			var item01 = "<div class='col-md-6'><div class='row-fluid'><div class='span12'>"
 				var item02 = "<img src='" + imageThumb + "' class='' />";
 				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a>"
 			var item05 = "</div></div>";				
