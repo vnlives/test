@@ -44,16 +44,16 @@ function mycallback(json) {
 		} else if (flag == 1) {
 			
 			var item01 = "<div class='col-md-6'><div class='row-fluid'><div class='span12 item'>"
-				var item02 = "<div class='clearfix content-heading'><img class='pull-left' src='" + imageThumb + "' class='float' /></div>";
-				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a>"
-			var item05 = "<div style='clear'></div></div></div>";				
+				var item02 = "<div class='clearfix content-heading'><img class='pull-left' src='" + imageThumb + "' class='float' />";
+				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a></div>"
+			var item05 = "</div></div>";				
 			
 			item = item01 + item02 + item03 + item05;
 		} else {
 			var item01 = "<div class='row-fluid'><div class='span12 item'>"
 				var item02 = "<div class='clearfix content-heading'><img class='pull-left' src='" + imageThumb + "' class='float' /></div>";
-				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a>"
-			var item05 = "<div style='clear'></div></div></div>";				
+				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a></div>"
+			var item05 = "</div></div>";				
 			
 			item = item01 + item02 + item03 + item05;			
 			
