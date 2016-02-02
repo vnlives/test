@@ -2,6 +2,9 @@ function mycallback(json) {
 	var flag = 0;
 	var length = json.feed.entry.length;
 	var entry = json.feed.entry;
+	
+	document.write("<div class='row-fluid'>");
+	
 	for (var i = 0; i < json.feed.entry.length; i++) {
 		for (var j = 0; j < json.feed.entry[i].link.length; j++) {
 			if (json.feed.entry[i].link[j].rel == 'alternate') {
@@ -26,30 +29,45 @@ function mycallback(json) {
 			imageThumb = "http://2.bp.blogspot.com/-ex3V86fj4dQ/UrCQQa4cLsI/AAAAAAAAFdA/j2FCTmGOrog/s72-c/no-thumbnail.png";			
 			
 		}
-		
-		
-		var item00 = "<div class='item' style='margin:0px;overflow:hidden;'>";
-		var item01 = "<div class='image'><img src='" + imageThumb + "' class='float' /></div>";
-		
-		var item02a = "<div class='title'>";
-		var item02b = "<b>"
-		var item02c = "<a href='" + postUrl + "'>" + postTitle + "</a>"
-		var item02d = "</b>";
-		var item02e = "</div>";
-		
-		var item03 = "<div class='text'>" + postContent + "</div>";
-		var item04 = "</div>";
-		var item05 = "<div style='clear: both;'></div>";
-		
+				
 		var item = "";
 		if (flag == 0) {
-			 item = item00 + item01 + item02a + item02b + item02c + item02d + item02e + item03 + item04 + item05;
+			
+			var item01 = "<div class='span4'><div class='well'>"
+				var item02 = "<img src='" + imageThumb + "' class='' /><br />";
+				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a><br />"
+				var item04 = "<div class='text'>" + postContent + "</div><br />";
+			var item05 = "</div></div>";			
+			
+			 item = item00 + item01 + item02 + item03 + item04 + item05;
+			 
+		} else if (flag == 1) {
+			
+			var item01 = "<div class='span8'><div class='row-fluid'><div class='span12'>"
+				var item02 = "<img src='" + imageThumb + "' class='' /><br />";
+				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a><br />"
+				var item04 = "<div class='text'>" + postContent + "</div><br />";
+			var item05 = "</div></div>";				
+			
+			item = item00 + item01 + item02 + item03 + item04 + item05;
 		} else {
-			 item = item00 + item01 + item02a + item02b + item02c + item02d + item02e + item03 + item04 + item05;
+			var item01 = "<div class='row-fluid'><div class='span12'>"
+				var item02 = "<img src='" + imageThumb + "' class='' /><br />";
+				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a><br />"
+				var item04 = "<div class='text'>" + postContent + "</div><br />";
+			var item05 = "</div></div>";				
+			
+			item = item00 + item01 + item02 + item03 + item04 + item05;			
+			
 		}
 		
-		flag++;
 		document.write(item);
+		flag++;
 		
 	}
+	
+	document.write("</div></div>");
+	
+	
+	
 }
