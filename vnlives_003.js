@@ -39,7 +39,7 @@ function mycallback(json) {
 				var item04 = "<div class='text'>" + postContent + "</div><br />";
 			var item05 = "</div></div>";			
 			
-			 item = item00 + item01 + item02 + item03 + item04 + item05;
+			 item = item01 + item02 + item03 + item04 + item05;
 			 
 		} else if (flag == 1) {
 			
@@ -49,7 +49,7 @@ function mycallback(json) {
 				var item04 = "<div class='text'>" + postContent + "</div><br />";
 			var item05 = "</div></div>";				
 			
-			item = item00 + item01 + item02 + item03 + item04 + item05;
+			item = item01 + item02 + item03 + item04 + item05;
 		} else {
 			var item01 = "<div class='row-fluid'><div class='span12'>"
 				var item02 = "<img src='" + imageThumb + "' class='' /><br />";
@@ -57,7 +57,7 @@ function mycallback(json) {
 				var item04 = "<div class='text'>" + postContent + "</div><br />";
 			var item05 = "</div></div>";				
 			
-			item = item00 + item01 + item02 + item03 + item04 + item05;			
+			item = item01 + item02 + item03 + item04 + item05;			
 			
 		}
 		
