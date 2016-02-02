@@ -51,7 +51,7 @@ function mycallback(json) {
 			item = item01 + item02 + item03 + item05;
 		} else {
 			var item01 = "<div class='row-fluid'><div class='span12 item'>"
-				var item02 = "<div class='clearfix'><img class='pull-left' src='" + imageThumb + "' /></div>";
+				var item02 = "<div class='clearfix'><img class='pull-left' src='" + imageThumb + "' />";
 				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a></div>"
 			var item05 = "</div></div>";				
 			
