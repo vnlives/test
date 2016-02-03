@@ -45,14 +45,14 @@ function mycallback(json) {
 			
 			var item01 = "<div class='col-md-6'><div class='row-fluid'><div class='span12 item'>"
 				var item02 = "<div class='clearfix'><img class='pull-left' src='" + imageThumb + "' style='margin-right: 5px;' />";
-				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a></div>"
+				var item03 = "<a class='item-title' href='" + postUrl + "'>" + postTitle + "</a></div>"
 			var item05 = "</div></div>";				
 			
 			item = item01 + item02 + item03 + item05;
 		} else {
 			var item01 = "<div class='row-fluid'><div class='span12 item'>"
-				var item02 = "<div class='clearfix'><img class='pull-left' src='" + imageThumb + "' />";
-				var item03 = "<a href='" + postUrl + "'>" + postTitle + "</a></div>"
+				var item02 = "<div class='clearfix'><img class='pull-left' src='" + imageThumb + " style='margin-right: 5px;' />";
+				var item03 = "<a class='item-title' href='" + postUrl + "'>" + postTitle + "</a></div>"
 			var item05 = "</div></div>";				
 			
 			item = item01 + item02 + item03 + item05;			
