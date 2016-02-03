@@ -34,8 +34,8 @@ function mycallback(json) {
 		if (flag == 0) {
 			
 			var item01 = "<div class='col-md-6' style='padding-right:0px;'><div class='item well'>"
-				var item02 = "<img src='" + imageThumb.replace("/s72-c/","/s300/") + "' class='' style='width:100%;height:auto;' /><br />";
-				var item03 = "<a class='item-titles' href='" + postUrl + "'>" + postTitle + "</a><br />"
+				var item02 = "<img src='" + imageThumb.replace("/s72-c/","/s300/") + "' class='' style='width:100%;height:auto;margin: 10px 0px;' /><br />";
+				var item03 = "<div class='title'><a href='" + postUrl + "'>" + postTitle + "</a></div>"
 				var item04 = "<div class='text'>" + postContent + "</div><br />";
 			var item05 = "</div></div>";			
 			
