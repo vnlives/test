@@ -27,8 +27,10 @@ function mycallback(json) {
 		} else {
 			//imageThumb = "http://4.bp.blogspot.com/-h2-LerYoaPw/VBBWTEPqyjI/AAAAAAAANBc/jN0359Jn8bI/s72-c/VNLIVES-LOGO.jpg";
 			imageThumb = "http://2.bp.blogspot.com/-ex3V86fj4dQ/UrCQQa4cLsI/AAAAAAAAFdA/j2FCTmGOrog/s72-c/no-thumbnail.png";			
-			
 		}
+		
+		imageThumb = imageThumb.replace('/default.jpg','/0.jpg');
+		
 				
 		var item = "";
 		if (flag == 0) {
