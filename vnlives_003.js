@@ -12,14 +12,6 @@ function mycallback(json) {
 				break;
 			}
 		}
-		
-//		for (var j = 0; j < json.feed.entry[i].img.length; j++) {
-//			console.log(json.feed.entry[i].link[j].src);
-//			if (json.feed.entry[i].link[j].id == 'imgThumbAuto') {
-//				var imageThumbFirst = json.feed.entry[i].link[j].src;
-//				break;
-//			}
-//		}		
 
 		var postTitle = json.feed.entry[i].title.$t;
 		var postAuthor = json.feed.entry[i].author[0].name.$t;
@@ -29,12 +21,9 @@ function mycallback(json) {
 		var postContent = entryShort.substring(0, entryEnd) + '...';
 		var imageThumb = "";
 
-		//if (json.feed.entry[i].media$thumbnail.url == "" || json.feed.entry[i].media$thumbnail.url == null) {
-		var matches = new Array();
 		console.log(json.feed.entry[i].content.$t);
-		if (matches = json.feed.entry[i].content.$t.match(/https?:\/\/.+?\.(jpg|gif|png)/gi)) != null) {
-			imageThumb = matches[0];
-		} else if ("media$thumbnail" in entry[i]) {
+		//if (json.feed.entry[i].media$thumbnail.url == "" || json.feed.entry[i].media$thumbnail.url == null) {
+		if ("media$thumbnail" in entry[i]) {
 			imageThumb = json.feed.entry[i].media$thumbnail.url;		
 		} else {
 			//imageThumb = "http://4.bp.blogspot.com/-h2-LerYoaPw/VBBWTEPqyjI/AAAAAAAANBc/jN0359Jn8bI/s72-c/VNLIVES-LOGO.jpg";
@@ -69,7 +58,6 @@ function mycallback(json) {
 				var item03 = "<a class='' href='" + postUrl + "'>" + postTitle + "</a></div>"
 			var item05 = "</div></div>";				
 			
-			item = item01 + item02 + item03 + item05;			
 			item = item01 + item02 + item03 + item05;			
 			
 		}
