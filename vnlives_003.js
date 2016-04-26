@@ -12,14 +12,18 @@ function mycallback(json) {
 				break;
 			}
 		}
+
+		if () {
+			
+		}
 		
-		for (var j = 0; j < json.feed.entry[i].link.length; j++) {
-			console.log(json.feed.entry[i].link[j].src);
-			if (json.feed.entry[i].link[j].id == 'imgThumbAuto') {
-				var imageThumbFirst = json.feed.entry[i].link[j].src;
-				break;
-			}
-		}		
+//		for (var j = 0; j < json.feed.entry[i].img.length; j++) {
+//			console.log(json.feed.entry[i].link[j].src);
+//			if (json.feed.entry[i].link[j].id == 'imgThumbAuto') {
+//				var imageThumbFirst = json.feed.entry[i].link[j].src;
+//				break;
+//			}
+//		}		
 
 		var postTitle = json.feed.entry[i].title.$t;
 		var postAuthor = json.feed.entry[i].author[0].name.$t;
@@ -30,8 +34,10 @@ function mycallback(json) {
 		var imageThumb = "";
 
 		//if (json.feed.entry[i].media$thumbnail.url == "" || json.feed.entry[i].media$thumbnail.url == null) {
-		if (imageThumbFirst != "" && imageThumbFirst != null) {
-			imageThumb = imageThumbFirst;
+		var matches = new Array();
+		console.log(json.feed.entry[i].content.$t);
+		if (matches = json.feed.entry[i].content.$t.match(/https?:\/\/.+?\.(jpg|gif|png)/gi)) != null) {
+			imageThumb = matches[0];
 		} else if ("media$thumbnail" in entry[i]) {
 			imageThumb = json.feed.entry[i].media$thumbnail.url;		
 		} else {
