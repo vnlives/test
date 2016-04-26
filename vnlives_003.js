@@ -21,7 +21,7 @@ function mycallback(json) {
 		var postContent = entryShort.substring(0, entryEnd) + '...';
 		var imageThumb = "";
 
-		console.log(json.feed.entry[i].content.$t);
+		//console.log(json.feed.entry[i].content.$t);
 		//if (json.feed.entry[i].media$thumbnail.url == "" || json.feed.entry[i].media$thumbnail.url == null) {
 		if ("media$thumbnail" in entry[i]) {
 			imageThumb = json.feed.entry[i].media$thumbnail.url;		
