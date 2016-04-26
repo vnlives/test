@@ -12,10 +12,6 @@ function mycallback(json) {
 				break;
 			}
 		}
-
-		if () {
-			
-		}
 		
 //		for (var j = 0; j < json.feed.entry[i].img.length; j++) {
 //			console.log(json.feed.entry[i].link[j].src);
