@@ -14,9 +14,9 @@ function mycallback(json) {
 		}
 		
 		for (var j = 0; j < json.feed.entry[i].link.length; j++) {
-			console.log(json.feed.entry[i].link[j].href);
+			console.log(json.feed.entry[i].link[j].src);
 			if (json.feed.entry[i].link[j].id == 'imgThumbAuto') {
-				var imageThumbFirst = json.feed.entry[i].link[j].href;
+				var imageThumbFirst = json.feed.entry[i].link[j].src;
 				break;
 			}
 		}		
